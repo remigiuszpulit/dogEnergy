@@ -1,7 +1,8 @@
+import Navbar from '@/components/Navbar/Navbar'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Cabin } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const cabin = Cabin({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,8 +15,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pl">
+      <body className={cabin.className}>
+        <Navbar/>
+        {children}</body>
     </html>
   )
 }
