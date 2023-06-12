@@ -1,13 +1,11 @@
+import AboutUs from "@/components/AboutUs/AboutUs";
 import Hero from "@/components/Hero/Hero";
 
-
-export default async function Home() {
-  
+export default function Home() {
   return (
     <main>
-      <Hero/>
+      <Hero />
+      <AboutUs />
     </main>
-  )
+  );
 }
-
-
