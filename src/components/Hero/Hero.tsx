@@ -13,7 +13,10 @@ export default async function Hero() {
   const url = ("https:" + background.fields.file?.url) as string;
 
   return (
-    <article className="w-full, h-screen  relative overflow-hidden">
+    <article
+      id="about"
+      className="w-full, h-screen min-h-800  relative overflow-hidden"
+    >
       <Image
         src={url}
         alt="background-picture"
@@ -21,7 +24,7 @@ export default async function Hero() {
         className="object-cover brightness-19 -z-20"
       />
       <div
-        className={`w-full, h-screen flex-col flex justify-center items-center relative text-white gap-10 text-center`}
+        className={`w-full, h-screen min-h-800 flex-col flex justify-center items-center relative text-white gap-10 text-center`}
       >
         <h1 className="text-lg md:text-4xl  w-2/3	md:w-1/2">
           {title as string}

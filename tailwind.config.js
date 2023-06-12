@@ -10,6 +10,9 @@ module.exports = {
       brightness: {
         19: '.19',
         175: '1.75',
+      },
+      minHeight: {
+        800: '800px',
       }
     },
   },

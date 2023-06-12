@@ -17,7 +17,7 @@ export default async function AboutUs() {
   });
 
   return (
-    <section className="w-full, h-screen   relative overflow-hidden">
+    <section className="w-full, h-screen  min-h-800  relative overflow-hidden">
       <Image
         src="/background.png"
         alt="xd"
@@ -26,7 +26,7 @@ export default async function AboutUs() {
       />
       <div
         className={
-          "w-full, h-screen flex justify-center items-center flex-col md:flex-row gap-6 md:gap-32"
+          "w-full, h-screen  min-h-800  flex justify-center items-center flex-col md:flex-row gap-6 md:gap-32"
         }
       >
         {aboutUsItems.map((item) => (
