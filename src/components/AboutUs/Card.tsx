@@ -17,8 +17,8 @@ export default function Card({ name, about, photoUrl }: AboutItem) {
           className="object-cover"
         />
       </div>
-      <h3 className="text-sm md:text-2xl text-center">{name}</h3>
-      <p className="text-xs md:text-base text-center">{about}</p>
+      <h3 className="text-sm md:text-2xl text-center text-white">{name}</h3>
+      <p className="text-xs md:text-base text-center text-white">{about}</p>
     </div>
   );
 }

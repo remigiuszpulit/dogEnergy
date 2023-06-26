@@ -25,3 +25,34 @@ border-radius: 48px;
 .aboutUsBg {
   background-color: #ECECEC;
 }
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+border: 1px solid #BABABA;
+background: #FFF;
+}
+
+.formContainer {
+  border-radius: 3px;
+background: #FFF;
+box-shadow: 2px 4px 35px 0px rgba(214, 214, 214, 0.47);
+}
+
+.submitBtn {
+ 
+  display: flex;
+width: 183px;
+height: 61px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 48px;
+border: 2px solid #DB1D1D;
+color: #DB1D1D;
+font-size: 20px;
+font-weight: 700;
+letter-spacing: 1.2px;
+text-transform: uppercase;
+}

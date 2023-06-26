@@ -1,4 +1,5 @@
 import AboutUs from "@/components/AboutUs/AboutUs";
+import Form from "@/components/Form/Form";
 import Hero from "@/components/Hero/Hero";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <Hero />
       <AboutUs />
+      <Form />
     </main>
   );
 }

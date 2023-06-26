@@ -17,13 +17,7 @@ export default async function AboutUs() {
   });
 
   return (
-    <section className="w-full, h-screen  min-h-800  relative overflow-hidden">
-      <Image
-        src="/background.png"
-        alt="xd"
-        fill
-        className="object-contain aboutUsBg  -z-20"
-      />
+    <section className="w-full, h-screen  min-h-800 bg-black  overflow-hidden">
       <div
         className={
           "w-full, h-screen  min-h-800  flex justify-center items-center flex-col md:flex-row gap-6 md:gap-32"
