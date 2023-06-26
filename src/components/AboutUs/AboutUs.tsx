@@ -17,21 +17,15 @@ export default async function AboutUs() {
   });
 
   return (
-    <section className="w-full, h-screen  min-h-800 bg-black  overflow-hidden">
-      <div
-        className={
-          "w-full, h-screen  min-h-800  flex justify-center items-center flex-col md:flex-row gap-6 md:gap-32"
-        }
-      >
-        {aboutUsItems.map((item) => (
-          <Card
-            key={item.name}
-            name={item.name}
-            about={item.about}
-            photoUrl={item.photoUrl}
-          />
-        ))}
-      </div>
+    <section className="w-full, flex justify-center items-center flex-col md:flex-row gap-6 md:gap-32 bg-black py-40">
+      {aboutUsItems.map((item) => (
+        <Card
+          key={item.name}
+          name={item.name}
+          about={item.about}
+          photoUrl={item.photoUrl}
+        />
+      ))}
     </section>
   );
 }
