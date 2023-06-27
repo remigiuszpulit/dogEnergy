@@ -32,10 +32,7 @@ export default async function Hero() {
         <h2 className="font-normal text-base md:text-2xl w-2/3	md:w-1/2">
           {subtitle as string}
         </h2>
-        <Link
-          className="cta-button"
-          href={routes.filter((route) => route.name === "Kontakt")[0].path}
-        >
+        <Link className="cta-button" href="#contact">
           UMÓW SIĘ
         </Link>
       </div>

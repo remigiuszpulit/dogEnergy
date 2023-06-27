@@ -17,10 +17,11 @@ export default async function AboutUs() {
   });
 
   return (
-    <section className="w-full, flex justify-center items-center flex-col md:flex-row gap-6 md:gap-32 bg-black py-40">
-      {aboutUsItems.map((item) => (
+    <section className="w-full, flex justify-center items-center flex-col 2 bg-neutral-950">
+      {aboutUsItems.map((item, index) => (
         <Card
           key={item.name}
+          left={index === 0}
           name={item.name}
           about={item.about}
           photoUrl={item.photoUrl}

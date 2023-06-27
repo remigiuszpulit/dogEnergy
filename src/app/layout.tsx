@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 import { Cabin } from "next/font/google";
+import Footer from "@/components/Footer/Footer";
 
 const cabin = Cabin({ subsets: ["latin"] });
 
@@ -16,10 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl">
+    <html
+      lang="pl"
+      className="scroll-smooth"
+      style={{ scrollBehavior: "smooth" }}
+    >
       <body className={cabin.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

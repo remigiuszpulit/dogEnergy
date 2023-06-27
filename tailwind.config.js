@@ -13,6 +13,10 @@ module.exports = {
       },
       minHeight: {
         800: '800px',
+      },
+      height: {
+        800: '800px',
+        400: '400px',
       }
     },
   },

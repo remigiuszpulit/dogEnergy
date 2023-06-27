@@ -1,24 +1,34 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import Picture from "./Picture";
+import DescriptionText from "./DescriptionText";
 
 export interface AboutItem {
   name: string;
   about: string;
   photoUrl: string;
+  left: boolean;
 }
 
-export default function Card({ name, about, photoUrl }: AboutItem) {
+export default function Card({ name, about, photoUrl, left }: AboutItem) {
+  const orderLeft = [Picture, DescriptionText];
+  const orderRight = [DescriptionText, Picture];
+  const initialPosition = left ? -400 : 400;
   return (
-    <div className="w-56  md:w-96   flex flex-col gap-4 md:gap-8">
-      <div className="w-full h-56 md:h-96 relative ">
-        <Image
-          src={photoUrl}
-          alt={`${name} profile picture`}
-          fill
-          className="object-cover"
-        />
-      </div>
-      <h3 className="text-sm md:text-2xl text-center text-white">{name}</h3>
-      <p className="text-xs md:text-base text-center text-white">{about}</p>
-    </div>
+    <motion.div
+      initial={{ x: initialPosition }}
+      viewport={{ once: true }}
+      whileInView={{ x: 0, transition: { duration: 0.7 } }}
+      className="w-full h-400  md:h-800 grid  grid-cols-2"
+    >
+      {left
+        ? orderLeft.map((Component) => (
+            <Component key={name} url={photoUrl} name={name} about={about} />
+          ))
+        : orderRight.map((Component) => (
+            <Component key={name} url={photoUrl} name={name} about={about} />
+          ))}
+    </motion.div>
   );
 }
